@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: "kalaha"
+server:
+  servlet:
+    context-path: /kalaha
+
+springdoc:
+  api-docs:
+    enabled: true
+  packages-to-scan: za.co.pnb

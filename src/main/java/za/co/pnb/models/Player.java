@@ -70,18 +70,6 @@ public class Player {
         return houses.stream().allMatch(House::isEmpty);
     }
 
-    public void print() {
-        List<House> printHouses = new ArrayList<>(houses);
-        System.out.println("Player " + type.name());
-        System.out.println("Pit " + pit);
-        if(type.equals(PlayerType.NORTH))
-            Collections.reverse(printHouses);
-        printHouses.stream().forEach(h -> System.out.print(h.getHouseNumber() + " "));
-        System.out.println("");
-        printHouses.stream().forEach(h -> System.out.print(h.seedsAvailable() + " "));
-        System.out.println("");
-    }
-
     public int getPit() {
         return pit;
     }
@@ -97,5 +85,17 @@ public class Player {
 
     public List<House> getHouses() {
         return houses;
+    }
+
+    public void print() {
+        List<House> printHouses = new ArrayList<>(houses);
+        System.out.println("Player " + type.name());
+        System.out.println("Pit " + pit);
+        if(type.equals(PlayerType.NORTH))
+            Collections.reverse(printHouses);
+        printHouses.stream().forEach(h -> System.out.print(h.getHouseNumber() + " "));
+        System.out.println("");
+        printHouses.stream().forEach(h -> System.out.print(h.seedsAvailable() + " "));
+        System.out.println("");
     }
 }

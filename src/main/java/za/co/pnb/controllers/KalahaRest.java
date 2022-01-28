@@ -2,7 +2,7 @@ package za.co.pnb.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import za.co.pnb.models.GameService;
+import za.co.pnb.services.GameService;
 import za.co.pnb.models.PlayerType;
 import za.co.pnb.models.Session;
 

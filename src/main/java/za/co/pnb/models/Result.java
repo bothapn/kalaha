@@ -13,11 +13,6 @@ public class Result {
         this.playerAllEmpty = playerAllEmpty;
     }
 
-    public Result(int seedsForOpponent, boolean playerAllEmpty) {
-        this.seedsForOpponent = seedsForOpponent;
-        this.playerAllEmpty = playerAllEmpty;
-    }
-
     public Result() {
     }
 

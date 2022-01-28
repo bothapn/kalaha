@@ -2,7 +2,6 @@ package za.co.pnb.models;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import za.co.pnb.KalahaApplication;
 
 import java.util.UUID;
 

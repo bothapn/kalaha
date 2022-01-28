@@ -18,10 +18,6 @@ public class House {
         return copyOfSeeds;
     }
 
-    public void takeSeed() {
-        seeds--;
-    }
-
     public void giveSeed() {
         seeds++;
     }

@@ -1,8 +1,10 @@
-package za.co.pnb.models;
+package za.co.pnb.services;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpServerErrorException;
+import za.co.pnb.models.PlayerType;
+import za.co.pnb.models.Session;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +23,7 @@ public class GameService {
 
     public Session endSession(String sessionId) {
         if (!sessions.containsKey(sessionId))
-            throw new HttpServerErrorException(HttpStatus.BAD_REQUEST);
+            throw new HttpServerErrorException(HttpStatus.BAD_REQUEST, "Invalid session");
         Session session = sessions.get(sessionId);
         sessions.remove(sessionId);
         return session;
@@ -29,7 +31,7 @@ public class GameService {
 
     public Session play(String sessionId, PlayerType playerType, String houseNumber) {
         if (!sessions.containsKey(sessionId))
-            throw new HttpServerErrorException(HttpStatus.BAD_REQUEST);
+            throw new HttpServerErrorException(HttpStatus.BAD_REQUEST, "Invalid session");
         Session session =  sessions.get(sessionId);
         session.startPlay(playerType, Integer.parseInt(houseNumber));
         return session;

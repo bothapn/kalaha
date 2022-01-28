@@ -18,10 +18,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
                 email = "p@pnb.co.za"
         )),
         servers = {
-                @Server(description = "GCS", url = "https://pnb.co.za/"),
+                @Server(description = "Hosted-GCP-GAE", url = "https://kalaha-339608.ew.r.appspot.com/kalaha"),
                 @Server(description = "Localhost", url = "http://localhost:8080/kalaha")
         },
-        externalDocs = @ExternalDocumentation(description = "Rules of the game", url = "https://www.wikihow.com/Play-Kalaha")
+        externalDocs = @ExternalDocumentation(description = "Sourcecode", url = "https://github.com/bothapn/kalaha")
 )
 public class KalahaApplication {
     public static void main(String[] args) {

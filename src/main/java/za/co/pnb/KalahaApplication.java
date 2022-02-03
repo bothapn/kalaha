@@ -21,7 +21,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
                 @Server(description = "Hosted-GCP-GAE", url = "https://kalaha-339608.ew.r.appspot.com/kalaha"),
                 @Server(description = "Localhost", url = "http://localhost:8080/kalaha")
         },
-        externalDocs = @ExternalDocumentation(description = "Sourcecode", url = "https://github.com/bothapn/kalaha")
+        externalDocs = @ExternalDocumentation(description = "Sourcecode", url = "https://gitlab.com/bolcom/pieter-nicolaas-botha/-/tree/master")
 )
 public class KalahaApplication {
     public static void main(String[] args) {
